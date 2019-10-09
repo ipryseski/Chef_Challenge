@@ -1,0 +1,26 @@
+version: '3'
+services:
+  nginx:
+    image: nginx:latest
+    hostname: nginx
+    container_name: production_nginx
+    depends_on:
+            - node
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+      - ./nginx/error.log:/etc/nginx/error_log
+      - ./nginx/cache/:/etc/nginx/cache
+    ports:
+      - 80:80
+
+  node:
+    image: "node:11"
+    hostname: node
+    user: "node"
+    working_dir: /home/node/app
+    environment:
+      - NODE_ENV=production
+    volumes:
+      - ./node/:/home/node/app
+    command: "node /home/node/app/index.js"
+
