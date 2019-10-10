@@ -1,7 +1,7 @@
 name             'Chef_Challenge'
 maintainer       'Ian Pryseski'
 maintainer_email 'ian.pryseski@gmail.com'
-license          'MIT'
+license          'Apache 2.0'
 description      'Installs/Configures docker,nginx,nodejs'
 long_description 'Installs/Configures docker,nginx,nodejs'
 version          '0.1.0'

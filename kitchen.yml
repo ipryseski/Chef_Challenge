@@ -11,8 +11,7 @@ driver:
 
 provisioner:
   name: chef_zero
-  client_rb:
-    chef_license: accept
+  
   ## product_name and product_version specifies a specific Chef product and version to install.
   ## see the Chef documentation for more details: https://docs.chef.io/config_yml_kitchen.html
   #  product_name: chef
@@ -26,7 +25,7 @@ platforms:
 
 suites:
   - name: default
-    verifier:
-      inspec_tests:
-        - test/integration/default
+    run_list:
+        - recipe[Chef_Challenge::default]
     attributes:
+

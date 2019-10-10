@@ -1,6 +1,11 @@
-#Docker repo
+
 base_url = "https://download.docker.com/linux/centos/#{node['platform_version'].to_i}/x86_64"
 gpg_key = 'https://download.docker.com/linux/centos/gpg'
+
+#Docker standard release repo
+#default['yum']['docker-repo']['url'] = "https://download.docker.com/linux/centos/docker-ce.repo"
+
+#Docker-stable repo
 default['yum']['docker-stable']['baseurl'] = "#{base_url}/stable"
 default['yum']['docker-stable']['description'] = 'Docker Stable Respository'
 default['yum']['docker-stable']['gpgkey'] = gpg_key
