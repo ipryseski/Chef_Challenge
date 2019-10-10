@@ -1,0 +1,73 @@
+{
+  "revision_id": "0e19d0ed71a88334606d3ca61409a6a32b8390be2df81de1d5ba2ba3a186fc29",
+  "name": "Chef_Challenge",
+  "run_list": [
+    "recipe[Chef_Challenge::default]"
+  ],
+  "included_policy_locks": [
+
+  ],
+  "cookbook_locks": {
+    "Chef_Challenge": {
+      "version": "0.1.0",
+      "identifier": "88a01521028e3cf56afd27a18e0ec4fb1f351992",
+      "dotted_decimal_identifier": "38456609441222204.69079004818279950.216582839409042",
+      "source": ".",
+      "cache_key": null,
+      "scm_info": {
+        "scm": "git",
+        "remote": "https://github.com/ipryseski/Chef_Challenge.git",
+        "revision": "7fca86c0225936519a462c561d48edfd698044c7",
+        "working_tree_clean": false,
+        "published": true,
+        "synchronized_remote_branches": [
+          "origin/HEAD -> origin/master",
+          "origin/master"
+        ]
+      },
+      "source_options": {
+        "path": "."
+      }
+    },
+    "docker": {
+      "version": "4.9.3",
+      "identifier": "52134bd5973dfa80278d5bd302f04cc54b4d2131",
+      "dotted_decimal_identifier": "23102164517207546.36072285103391472.84410255614257",
+      "cache_key": "docker-4.9.3-supermarket.chef.io",
+      "origin": "https://supermarket.chef.io:443/api/v1/cookbooks/docker/versions/4.9.3/download",
+      "source_options": {
+        "artifactserver": "https://supermarket.chef.io:443/api/v1/cookbooks/docker/versions/4.9.3/download",
+        "version": "4.9.3"
+      }
+    }
+  },
+  "default_attributes": {
+
+  },
+  "override_attributes": {
+
+  },
+  "solution_dependencies": {
+    "Policyfile": [
+      [
+        "Chef_Challenge",
+        ">= 0.0.0"
+      ],
+      [
+        "docker",
+        "= 4.9.3"
+      ]
+    ],
+    "dependencies": {
+      "Chef_Challenge (0.1.0)": [
+        [
+          "docker",
+          ">= 0.0.0"
+        ]
+      ],
+      "docker (4.9.3)": [
+
+      ]
+    }
+  }
+}
