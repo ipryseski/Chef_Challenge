@@ -4,14 +4,6 @@
 #
 # 
 
-#Setup repo
-
-yum_repository 'docker-stable'  do
-  node['yum']['docker-stable'].each do |config, value|
-    send(config.to_sym, value) unless value.nil? || config == 'managed'
-  end
-end if node['yum']['docker-stable']['managed']
-
 #package 'yum-utils'
 #package 'device-mapper-persistent-data'
 #package 'lvm2'
@@ -23,16 +15,16 @@ end if node['yum']['docker-stable']['managed']
 #end
 
 
-#Enable IPv4 Forwarding
-#execute "Enable IPv4 Fowarding" do
-#  command "/sbin/sysctl -w net.ipv4.ip_forward=1"
-#  user "root"
-#  group "root"
-#end
+#Setup repo
 
-#service "network" do
-#  action :restart
-#end
+yum_repository 'docker-stable'  do
+  node['yum']['docker-stable'].each do |config, value|
+    send(config.to_sym, value) unless value.nil? || config == 'managed'
+  end
+end if node['yum']['docker-stable']['managed']
+
+
+
 
 #Install Docker
 package 'docker-ce'
@@ -89,11 +81,7 @@ execute "Firewall enable http" do
     group 'root'
 end
 
-#execute "Firewall disable ssh" do
-#    command "firewall-cmd --permanent --zone=public --remove-service=ssh"
-#    user 'root'
-#    group 'root'
-#end
+
 
 execute "Firewall reload" do
     command "firewall-cmd --reload"
@@ -102,3 +90,14 @@ execute "Firewall reload" do
 end
 
 
+
+#Enable IPv4 Forwarding
+#execute "Enable IPv4 Fowarding" do
+#  command "/sbin/sysctl -w net.ipv4.ip_forward=1"
+#  user "root"
+#  group "root"
+#end
+
+#service "network" do
+#  action :restart
+#end
