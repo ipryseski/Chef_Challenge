@@ -1,5 +1,5 @@
 {
-  "revision_id": "5d70afe4858041f6630f08903e324d86a6e9d83e2fc7ac7764a4926290ddcdf0",
+  "revision_id": "6946cffcde0e249489727658681be0ee88cf967b41c255caadd65da9b3130568",
   "name": "Chef_Challenge",
   "run_list": [
     "recipe[Chef_Challenge::default]"
@@ -10,14 +10,14 @@
   "cookbook_locks": {
     "Chef_Challenge": {
       "version": "0.1.0",
-      "identifier": "86bf89f04449b740a4e1a7f7c19d566aca9e34cd",
-      "dotted_decimal_identifier": "37928246041659831.18195687602110877.95016665887949",
+      "identifier": "b400877622db6cf4a8fca06e7837c76fcb6dfd3a",
+      "dotted_decimal_identifier": "50666077610498924.68865697294219319.219282968280378",
       "source": ".",
       "cache_key": null,
       "scm_info": {
         "scm": "git",
         "remote": "https://github.com/ipryseski/Chef_Challenge.git",
-        "revision": "4599c3d662cb6a6f79216cee7dae54e6932e5f05",
+        "revision": "8711d63283a2fe2e7b78212fcaaa5c923bf03f41",
         "working_tree_clean": false,
         "published": true,
         "synchronized_remote_branches": [
