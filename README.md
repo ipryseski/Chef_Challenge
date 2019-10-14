@@ -28,3 +28,4 @@ The goal of this cookbook is to deploy Javascript through containerized Node.js 
   - Verification that the http response from the previous listener is returning correct results.
 - There is a full output from a Kitchen test under [!Notes/Kitchen_Test.txt](!Notes/Kitchen_Test.txt)
   - Additional Kitchen Converge logs [!Notes/Kitchen_Converge.md](!Notes/Kitchen_Converge.md)
+- Deployment instructions [Chef_Challenge Deploy](!Notes/Chef_Challenge_Deploy.md)
